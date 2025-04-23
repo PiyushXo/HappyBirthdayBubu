@@ -1,0 +1,217 @@
+@font-face {
+  font-family: 'CuteFont';
+  src: url('CuteFont-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  background: #fff0f5;
+  font-family: 'CuteFont', sans-serif;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.center-text {
+  padding: 50px 20px;
+}
+
+button {
+  background: #ff69b4;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 15px;
+  font-size: 1.2em;
+  border: none;
+  cursor: pointer;
+}
+
+.popup {
+  background: white;
+  border-radius: 20px;
+  margin: 50px auto;
+  padding: 30px;
+  width: 80%;
+  max-width: 400px;
+  box-shadow: 0 0 20px rgba(255,105,180,0.5);
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.cake-img {
+  width: 250px;
+  cursor: pointer;
+}
+
+.card {
+  background: white;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px #ffc0cb;
+  display: inline-block;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.hole {
+  width: 100px;
+  height: 100px;
+  background: #ffe4e1;
+  border-radius: 50%;
+  position: relative;
+}
+
+.boo {
+  width: 60px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+}
+
+.eggplant {
+  position: fixed;
+  width: 40px;
+  animation: bounce 2s infinite;
+}
+
+.grow-button {
+  animation: growButton 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes growButton {
+  from { transform: scale(1); }
+  to { transform: scale(1.4); }
+}
+
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in forwards;
+}
+
+.fade-out {
+  animation: fadeOut 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.hit-reaction {
+  position: fixed;
+  font-size: 1.5em;
+  color: #ff3399;
+  animation: floatUp 1s ease-out forwards;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-50px); opacity: 0; }
+}
+
+.timer-bar-container {
+  width: 80%;
+  height: 15px;
+  background-color: #eee;
+  border-radius: 10px;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.timer-bar {
+  height: 100%;
+  width: 100%;
+  background-color: #ff69b4;
+  animation: shrink 15s linear forwards;
+}
+
+@keyframes shrink {
+  from { width: 100%; }
+  to { width: 0%; }
+}
+
+.sona-pic {
+    height: 200px;
+    width: 220px;
+    border-radius: 25%;
+    margin: 20px auto;
+    box-shadow: 0 0 15px #ff69b4;
+}
+.love-cards {
+  margin-top: 30px;
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 10px;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+}
+
+.love-cards .card {
+  background: #fff0f5;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 60%; /* Make the card narrower */
+  max-height: 400px; /* Set a max height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  font-size: 1.1em;
+  line-height: 1.5em;
+}
+
+
+#skipTypewriter {
+  margin-top: 20px;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.party-popper {
+  position: fixed;
+  font-size: 2em; /* Adjust the size as needed */
+  color: #ff69b4; /* Set a visible color, or use another color */
+  animation: float 2s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 9999; /* Ensure poppers are on top of other content */
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+
+

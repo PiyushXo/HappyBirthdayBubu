@@ -1,0 +1,93 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Happy Birthday Sonaaa 💖</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body id="mainBody">
+
+    <div id="welcome" class="center-text hidden">
+      <h1>Hey Booboo... 🎉</h1>
+      <p>Guess who made you a surprise?</p>
+      <button onclick="showPopup()">Obviously Me!</button>
+    </div>
+
+    <div id="popup" class="popup hidden">
+      <p>Oh so you are the pretty girl,huh?<br>Well, do you know what day is it today?</p>
+      <div class="buttons">
+        <button onclick="startGame('yes')">Yes</button>
+        <button onclick="startGame('no')">No</button>
+      </div>
+    </div>
+
+    <div id="gameConfirm" class="popup hidden">
+      <p>Well then, do you wanna play some games?</p>
+      <div class="buttons">
+        <button id="playYes" onclick="startGames()">Yes</button>
+        <button onclick="teaseHer()">No</button>
+      </div>
+    </div>
+
+    <div id="cakeGame" class="center-text hidden">
+      <h2>Tap the cake to blow out candles 🎂</h2>
+      <img src="cake.png" class="cake-img" onclick="lightCandle()" />
+      <p id="hint" class="hidden">Tap me baby!</p>
+      <div id="candles"></div>
+    </div>
+
+    <div id="cakeTroll" class="popup hidden">
+      <p>HAHA, NAHI BHUJEGI!! Wanna play another game?</p>
+      <div class="buttons">
+        <button onclick="startWhack()">Yes</button>
+        <button onclick="startWhack()">Yes</button>
+      </div>
+    </div>
+
+    <div id="whackGame" class="hidden">
+      <h2>Whack-A-Booboo!!👋</h2>
+      <div class="timer-bar-container">
+        <div id="timerBar" class="timer-bar"></div>
+      </div>
+
+      <div class="grid" id="grid"></div>
+      <p>Score: <span id="score">0</span></p>
+    </div>
+
+    <div id="mainMessage" class="center-text hidden">
+      <h1>It's your birthday Sonaaa!! 💖</h1>
+      <img src="sonal.png" class="sona-pic" alt="Sonal">
+
+      <div id="lovePopup" class="popup">
+        <p>Wanna know why I love you so much?</p>
+        <button onclick="showLoveCards()">Ofc bish!!</button>
+      </div>
+
+      <div id="loveCards" class="love-cards hidden">
+  <div class="card">
+    <p id="typewriterText"></p>
+    <button id="skipTypewriter" class="hidden" onclick="revealFullLove()">Wanna read everything cause you can't fuckin wait?</button>
+  </div>
+</div>
+
+    </div>
+
+    <div id="retryPopup" class="popup hidden">
+      <p>Wanna play again since you really hate me?</p>
+      <div class="buttons">
+        <button onclick="startWhack()">Play Again</button>
+        <button onclick="continueToLove()">Okay fine 💗</button>
+      </div>
+    </div>
+
+    <div id="finalCelebrate" class="popup hidden">
+      <p>Okay we can play these games all day & night!<br>It's time to celebrate your birthday nunu!! 🎉</p>
+      <button onclick="revealFinalMessage()">Let's gooo! 🥳</button>
+    </div>
+
+
+    <audio id="bgMusic" preload="auto" src="cutemusic.mp3" loop></audio>
+    <canvas id="confetti"></canvas>
+    <script src="script.js"></script>
+  </body>
+  </html>
